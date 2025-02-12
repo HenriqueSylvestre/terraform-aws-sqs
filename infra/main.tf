@@ -14,7 +14,7 @@ resource "aws_sqs_queue" "terraform_queue" {
 }
 
 resource "aws_sqs_queue" "terraform_queue_deadletter" {
-  name = "terraform-example-queue-dlq"
+  name                      = "terraform-example-queue-dlq"
   message_retention_seconds = 1209600 # 14 dias (padrão para DLQ)
   max_message_size          = 262144
 }
